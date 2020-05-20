@@ -1,13 +1,13 @@
 {% set name = "sos-r" %}
-{% set version = "0.19.2" %}
+{% set version = "0.19.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cf45be6dc192f31ad26ccbabe39720919d47453f5a76a272de925de83302ecf2
+  sha256: c4f4abb34e82346a34f4cd5444b6346a14ad82af070cbc7385e43318bde52a23
 
 build:
   noarch: python
@@ -41,7 +41,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "SoS language module for the R programming language"
+  summary: SoS language module for the R programming language
   doc_url: https://vatlab.github.io/sos-docs/
   dev_url: https://github.com/vatlab/sos-r
 
