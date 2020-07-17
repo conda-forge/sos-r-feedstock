@@ -5,7 +5,7 @@ Home: https://github.com/vatlab/sos-r
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: SoS language module for the R programming language
 
