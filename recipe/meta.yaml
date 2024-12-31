@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d6d7a25b3d3ac2f04e61d0aaae1c02a7069fbfeb5354e51fc9fdfa61f57513d7
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - sos-notebook >=0.19.4
     - pandas
     - numpy
@@ -33,6 +33,7 @@ test:
     - nose
     - pytest
     - selenium
+    - python {{ python_min }}
   imports:
     - sos_r
 
