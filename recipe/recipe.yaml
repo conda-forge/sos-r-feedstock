@@ -1,18 +1,18 @@
 schema_version: 1
 
 context:
-  version: 0.20.1
+  version: "0.20.3"
 
 package:
   name: sos-r
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/sos-r/sos-r-${{ version }}.tar.gz
-  sha256: d6d7a25b3d3ac2f04e61d0aaae1c02a7069fbfeb5354e51fc9fdfa61f57513d7
+  url: https://pypi.org/packages/source/s/sos-r/sos_r-${{ version }}.tar.gz
+  sha256: 35c6c41f68324e89a9d00686562deddedeae3e185670d06e1d761fdeb580f1a6
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
